@@ -10,7 +10,13 @@ class PostsController < ApplicationController
   end
   def create
     @post = Post.new(params[:post])
-    @post.save
+    respond_to do |format| 
+      if @post.save
+        format.html { redirect_to posts_path }
+      else
+        format.html { redirect_to new_post_path }
+      end
+    end
   end
   def edit 
     @post = Post.where(id: params[:id])
