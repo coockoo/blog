@@ -1,3 +1,6 @@
+<div class="new-post">
+  <%= link_to "Create new post", new_post_path %>
+</div>
 <% @posts.each do |post| %>
 <div class="post">
   <h1><%= link_to post.title, post_path(post) %></h1>
