@@ -17,3 +17,7 @@
 #Ignore all swp files
 *.swo
 *.swp
+
+#images
+*.ico
+*.png
