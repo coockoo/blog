@@ -1,0 +1,22 @@
+.CodeRay {
+				background-color: rgb(25,25,25);
+				padding: {
+								top: 0.5em;
+								bottom: 0.5em;
+								left: 1em;
+				}
+				div.code {
+								pre {
+												font-weight: bold;
+												color: rgb(255,255,255);
+												span.keyword {
+																color: rgb(45,45,230);
+												}
+												span.function {
+																color: rgb(145,110,137);
+												}
+												span.local-variable {
+												}
+								}
+				}
+}
