@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at DESC").all
   end
   def show
     @post = Post.where(id: params[:id]).first
