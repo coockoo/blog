@@ -1,5 +1,5 @@
 <div class="post">
   <h1><%= @post.title %></h1>
-  <p><%= @post.post %></p>
+  <p><%= coderay(@post.post).html_safe %></p>
   <span><%= @post.posted_at %></span>
 </div>
