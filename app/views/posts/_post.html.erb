@@ -1,5 +1,5 @@
 <div class="post">
   <h1><%= @post.title %></h1>
-  <p><%= coderay(@post.post).html_safe %></p>
+  <%= raw textilize(coderay(@post.post)) %>
   <span><%= @post.posted_at %></span>
 </div>
