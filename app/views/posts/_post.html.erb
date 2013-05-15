@@ -1,5 +1,6 @@
 <div class="post">
-  <h1><%= @post.title %></h1>
+  <%= content_tag :h1, @post.title %>
   <%= raw textilize(coderay(@post.post)) %>
+  <%= link_to "Delete", post_path(@post), :method => :delete %>
   <span><%= @post.posted_at %></span>
 </div>

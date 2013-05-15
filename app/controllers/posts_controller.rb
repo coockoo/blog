@@ -28,8 +28,15 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
   def destroy
-    post = Post.where(id: params[:id]).first
-    post.destroy
+    @post = Post.where(id: params[:id]).first
+    respond_to do |format|
+      if @post.destroy 
+        format.html { redirect_to posts_path, :notice => "The post was successfully deleted" }
+      else
+        # What error exactly (user rights maybe)
+        format.html { redirect_to post_path(@post), :notice => "An error occured" }
+      end
+    end
   end
   
 end
